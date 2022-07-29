@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import "./Info.scss";
+import "./index.scss";
 import qrUrl from "../../assets/qrCode.png";
 import qrUrl_pc from "../../assets/qrCode_pc.png";
 import { motion } from "framer-motion";

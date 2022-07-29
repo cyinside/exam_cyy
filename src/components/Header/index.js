@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, animate } from "framer-motion";
-import './Header.scss';
+import './index.scss';
 
 const Header = () => {
   const [clicked,setClicked] = useState(false)

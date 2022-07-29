@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Header from "./components/Header/Header";
-import Info from "./components/Info/Info";
-import AnimateComponent from "./components/AnimateComponent/AnimateComponent";
+import Header from "./components/Header";
+import Info from "./components/Info";
+import AnimateComponent from "./components/AnimateComponent";
 import { setPlatform } from "./util/util";
 import './App.scss';
 
