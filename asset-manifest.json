@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/exam_cyy/static/css/main.cb11fae1.css",
-    "main.js": "/exam_cyy/static/js/main.4681805a.js",
-    "static/media/case_pc.png": "/exam_cyy/static/media/case_pc.10cea8ad06ed98977535.png",
-    "static/media/case1.png": "/exam_cyy/static/media/case1.d293f39f24dc13f44ab0.png",
-    "static/media/qrCode.png": "/exam_cyy/static/media/qrCode.39012aeb065ba6fb6ee6.png",
+    "main.css": "/exam_cyy/static/css/main.07da400d.css",
+    "main.js": "/exam_cyy/static/js/main.63a282fb.js",
+    "static/media/case_pc.png": "/exam_cyy/static/media/case_pc.832605a179b5d55b95f4.png",
+    "static/media/case1.png": "/exam_cyy/static/media/case1.12b095feddbdab9045fa.png",
     "static/media/desc_pc.png": "/exam_cyy/static/media/desc_pc.68651a590177626d066b.png",
-    "static/media/qrCode_pc.png": "/exam_cyy/static/media/qrCode_pc.be5ad3d060bce9efd6b5.png",
     "static/media/desc.png": "/exam_cyy/static/media/desc.40664adf74493ddd98ec.png",
     "index.html": "/exam_cyy/index.html",
-    "main.cb11fae1.css.map": "/exam_cyy/static/css/main.cb11fae1.css.map",
-    "main.4681805a.js.map": "/exam_cyy/static/js/main.4681805a.js.map"
+    "main.07da400d.css.map": "/exam_cyy/static/css/main.07da400d.css.map",
+    "main.63a282fb.js.map": "/exam_cyy/static/js/main.63a282fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb11fae1.css",
-    "static/js/main.4681805a.js"
+    "static/css/main.07da400d.css",
+    "static/js/main.63a282fb.js"
   ]
 }
