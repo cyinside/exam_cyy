@@ -1,0 +1,225 @@
+@import '../../common/util.scss';
+@import '../../common/var.scss';
+
+@mixin scaleToTop($n) {
+  transform-origin: 50% 100%;
+  transform: scaleY($n);
+  transition: all 0.5s ease;
+}
+
+@mixin scaleToBottom($n) {
+  transform-origin: 50% 0%;
+  transform: scaleY($n);
+  transition: all 0.5s ease;
+}
+
+@mixin btns_animate() {
+  span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: block;
+
+    &:nth-child(1) {
+      color: $primaryColor;
+      z-index: 2;
+      background: none;
+      @include scaleToBottom(1)
+    }
+
+    &:nth-child(2) {
+      color: #fff;
+      z-index: 1;
+      background: $primaryColor;
+      @include scaleToTop(0)
+    }
+  }
+
+  &:hover {
+    span {
+      &:nth-child(1) {
+        @include scaleToBottom(0)
+      }
+
+      &:nth-child(2) {
+        @include scaleToTop(1)
+      }
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(221deg , #ace0f9, #FFF1EB);
+  padding-bottom: px2vh(20);
+}
+
+.info_mobile {
+  @extend .info;
+  font-size: .2rem;
+
+  .info_title {
+  margin-top: px2vh(87);
+    @include backgroud('../../assets/title.png', 157, 37);
+  }
+
+  .info_subtitle {
+    @include backgroud('../../assets/subTitle.png', 157, 8);
+    margin-top: px2vh(6);
+  }
+
+  .info_desc {
+    @include backgroud('../../assets/desc.png', 322, 81);
+    margin-top: px2vh(39);
+  }
+
+  .info_box {
+    width: 100%;
+    .info_qrcode {
+      margin-top: px2vh(30);
+  
+      img {
+        width: px2vw(176);
+        height: auto;
+      }
+    }
+  
+    .info_btns {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: px2vh(34);
+      font-weight: 600;
+  
+      .btns_contact {
+        border: 1px solid $primaryColor;
+        width: px2vw(100);
+        height: px2vh(26);
+        border-radius: 4px;
+        font-size: .7rem;
+        overflow: hidden;
+        position: relative;
+        line-height: px2vh(26);
+  
+        @include btns_animate()
+      }
+  
+      .btns_follow {
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        width: px2vw(100);
+        height: px2vh(25);
+        border-radius: 4px;
+        font-size: .2rem;
+        line-height: px2vh(26);
+      }
+    }
+  }
+
+
+  .info_case {
+    margin-top: px2vh(34);
+    @include backgroud('../../assets/case1.png', 325, 230)
+  }
+}
+
+.info_pc {
+  @extend .info;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+
+  .info_title {
+    margin-top: 20vh;
+    @include backgroud_pc('../../assets/title_pc.png', 195, 45);
+  }
+
+  .info_subtitle {
+    @include backgroud_pc('../../assets/subTitle_pc.png', 195, 10);
+    margin-top: px2vh_pc(20);
+  }
+
+  .info_desc {
+    @include backgroud_pc('../../assets/desc_pc.png', 426, 69);
+    margin-top: px2vh_pc(35);
+  }
+
+  .info_box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin-top: px2vw_pc(-10);
+
+    .info_qrcode {
+      width: 100%;
+      text-align: right;
+      img {
+        width: px2vw_pc(100);
+        height: auto;
+      }
+    }
+
+    .info_btns {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin-top: px2vh_pc(34);
+      font-weight: 700;
+      font-size: 1.2rem;
+
+      .btn_arrows {
+        width: 0;
+        height: 0;
+        border-top: 15px solid #fff;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        position: absolute;
+        top: 50%;
+        transform: rotate(90deg) translateX(-20%);
+        left: 5px;
+      }
+      .btns_contact {
+        border: 2px solid $primaryColor;
+        width: 11rem;
+        height: 2.6rem;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        line-height: 2.6rem;
+
+        @include btns_animate();
+
+        &.active {
+          span {
+            &:nth-child(1) {
+              transform: scaleY(0);
+            }
+  
+            &:nth-child(2) {
+              transform: scaleY(1);
+            }
+          }
+        }
+      }
+
+      .btns_follow {
+        color: $primaryColor;
+        border: 2px solid $primaryColor;
+        width: 11rem;
+        height: 2.6rem;
+        border-radius: 4px;
+        line-height: 2.6rem;
+      }
+    }
+  }
+
+  .info_case {
+    margin-top: px2vh(60);
+    @include backgroud_pc('../../assets/case_pc.png', 696, 392)
+  }
+}

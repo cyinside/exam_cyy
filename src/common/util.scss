@@ -1,0 +1,41 @@
+@import './var.scss';
+
+@function px2vw($px) {
+  @return $px * 100vw / 375;
+}
+
+@function px2vh($px) {
+  @return $px * 100vh / 724;
+}
+
+@function px2vh_pc($px) {
+  @return $px * 100vh / 540;
+}
+
+@function px2vw_pc($px) {
+  @return $px * 100vw / 960;
+}
+
+@mixin backgroud($url,$w:0,$h:0) {
+  background: url($url) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: px2vw($w);
+  height: px2vh($h);
+}
+
+@mixin backgroud_pc($url,$w:0,$h:0) {
+  background: url($url) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: px2vw_pc($w);
+  height: px2vh_pc($h);
+}
+
+@mixin btn($w,$h) {
+  width: px2vw($w);
+  height: px2vh($h);
+  border: 1px solid $primaryColor;
+  display: block;
+  border-radius: 5px;
+}
